@@ -50,12 +50,18 @@ class MainPageContent extends React.Component {
           secondary: `Who wants to have a cookout this weekend? I just got some furniture
             for my backyard and would love to fire up the grill.`,
           person: 'header001',
+        },        
+        {
+          id: 8,
+          primary: 'View More',
+          secondary: `Want more events? We got em!`,
+          person: 'header002',
         },
       ];
       return <Grid className="">
       
-        {events.map(({ id, primary, secondary, person }) => <div className="EventPageTile">
-          <img src={require(`../images/main-events-page/${person}.jpg`)} alt={id} key={id} className='EventPageImg' />
+        {events.map(({ id, primary, secondary, person }) => <div className="EventPageTile" key={id}>
+          <img src={require(`../images/main-events-page/${person}.jpg`)} alt={id} className='EventPageImg' />
           <h3>{primary}</h3>
           <p>{secondary}</p>
         </div>)}

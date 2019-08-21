@@ -21,7 +21,7 @@ header.MuiPaper-root.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-positionFixed.
 .EventPageTile {
   width: 300px;
   display: inline-block;
-  padding: 20px;
+  margin: 20px;
   vertical-align: top;
 }
 

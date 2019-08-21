@@ -1,17 +1,24 @@
 import React from 'react';
 import logo from './logo.svg';
 import Main from './components/MainPage';
+import MyEvents from './components/MyEventsPage';
+import SubmitEvent from './components/SubmitEventsPage';
+import Dashboard from './components/Dashboard';
+import Profile from './components/ProfilePage';
+import Pending from './components/PendingEventsPage';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
-import Container from '@material-ui/core/Container';
 
 function App() {
   return (
     <div className="App" >
       <Router>
         <Route exact path="/" component={Main} />
-        {/* <Route path="/about" component={About} />
-        <Route path="/topics" component={Topics} /> */}
+        <Route path="/dashboard" component={Dashboard} />
+        <Route path="/events" component={MyEvents} />
+        <Route path="/pending" component={Pending} />
+        <Route path="/submit" component={SubmitEvent} />
+        <Route path="/profile" component={Profile} />
         </Router>
       </div>
   );

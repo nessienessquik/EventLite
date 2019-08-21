@@ -1,4 +1,5 @@
 import React from 'react';
+import ModalButton from './ModalButton';
 import Grid from '@material-ui/core/Grid';
 import logo from '../images/logo.svg';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,8 +14,8 @@ class TopNav extends React.Component {
         <AppBar position="static">
           <Toolbar>
             <Button className="TopNavMenuItem"><img src={logo} alt="logo" className="NavLogo" /></Button>
-            <Button className="TopNavMenuItem">Create Event</Button>
-            <Button className="TopNavMenuItem">Login</Button>
+            <ModalButton buttonName="Sign-Up" buttonComponent="SignUpPage"/>
+            <ModalButton buttonName="Log-In" buttonComponent="LogInPage"/>
           </Toolbar>
         </AppBar>
        

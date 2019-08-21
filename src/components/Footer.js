@@ -1,19 +1,53 @@
 import React from 'react';
-import Grid from '@material-ui/core/Grid';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Typography from '@material-ui/core/Typography';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Link from '@material-ui/core/Link';
 import Button from '@material-ui/core/Button';
 
+function Copyright() {
+  return (
+    <Typography variant="body2" color="textSecondary" align="center">
+      {'Copyright © '}
+      <Link color="inherit" href="https://material-ui.com/">
+        EventLite
+      </Link>{' '}
+      {new Date().getFullYear()}
+      {'. Built with '}
+      <Link color="inherit" href="https://material-ui.com/">
+        Material-UI.
+      </Link>
+    </Typography>
+  );
+}
 
-import Link from '@material-ui/core/Link';
-import ErrorPage from './ErrorPage';
-// import logo from './logo.svg';
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: 'flex',
+    flexDirection: 'column',
+    minHeight: '10vh',
+  },
+  main: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(2),
+  },
+  footer: {
+    padding: theme.spacing(2),
+    marginTop: 'auto',
+    backgroundColor: 'white',
+  },
+}));
 
-class Footer extends React.Component {
-    render() {
-      return <Grid className="Footer">
-        <AppBar className="footer">
-          <Toolbar>
+export default function StickyFooter() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <CssBaseline />
+      <footer className={classes.footer}>
+        <Container maxWidth="sm">
+          <Typography variant="body1"> 
             <Button >About</Button>
             <Button >FAQ's</Button>
             <Button >Careers</Button>
@@ -21,11 +55,10 @@ class Footer extends React.Component {
             <Button >Terms</Button>
             <Button >Privacy</Button>
             <Button >Cookies</Button>
-          </Toolbar>
-        </AppBar>
-
-      </Grid>;
-    }
-  }
-
-export default Footer;
+          </Typography>
+          <Copyright />
+        </Container>
+      </footer>
+    </div>
+  );
+}
