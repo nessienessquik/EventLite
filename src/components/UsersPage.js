@@ -27,11 +27,11 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Pending() {
+export default function UsersPage() {
   const classes = useStyles();
   return (
     <React.Fragment>
-      <Title>Pending Events</Title>
+      <Title>Pending Users</Title>
       <Table size="small">
         <TableHead>
           <TableRow>

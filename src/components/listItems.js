@@ -9,6 +9,7 @@ import PeopleIcon from '@material-ui/icons/People';
 import BarChartIcon from '@material-ui/icons/BarChart';
 import LayersIcon from '@material-ui/icons/Layers';
 import AssignmentIcon from '@material-ui/icons/Assignment';
+import { Link } from 'react-router-dom';
 
 export const mainListItems = (
   <div>
@@ -16,19 +17,19 @@ export const mainListItems = (
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <ListItemText primary="Manage Events" />
+      <Link to="/pending"><ListItemText primary="Manage Events" /></Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <ListItemText primary="Submit an Event" />
+      <Link to="/submit"><ListItemText primary="Submit an Event" /></Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <ListItemText primary="Profile Settings" />
+      <Link to="/profile"><ListItemText primary="Profile Settings" /></Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
@@ -52,13 +53,13 @@ export const secondaryListItems = (
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Manage Users" />
+      <Link to="/users"><ListItemText primary="Manage Users" /></Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <ListItemText primary="Pending Events" />
+      <Link to="/pending"><ListItemText primary="Pending Events" /></Link>
     </ListItem>
     <ListItem button>
       <ListItemIcon>

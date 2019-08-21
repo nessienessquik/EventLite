@@ -6,6 +6,7 @@ import SubmitEvent from './components/SubmitEventsPage';
 import Dashboard from './components/Dashboard';
 import Profile from './components/ProfilePage';
 import Pending from './components/PendingEventsPage';
+import Users from './components/UsersPage';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/pending" component={Pending} />
         <Route path="/submit" component={SubmitEvent} />
         <Route path="/profile" component={Profile} />
+        <Route path="/users" component={Users} />
         </Router>
       </div>
   );

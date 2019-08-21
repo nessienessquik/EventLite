@@ -1,6 +1,6 @@
 import React from 'react';
 import Title from './Title';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 // Generate Sales Data
 function createData(time, amount) {
