@@ -1,33 +1,31 @@
-.App {
-  text-align: center;
+.Header {
+  background-image: url("./images/main-events-page/header006.jpg");
+  background-size: cover;
+  height: 500px;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.TopNavMenuItem {
+  height: 75px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.NavLogo {
+  height: 75px;
 }
 
-.App-link {
-  color: #61dafb;
+header.MuiPaper-root.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-positionFixed.footer.MuiAppBar-colorPrimary.mui-fixed {
+  bottom: 0;
+  top: auto;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.EventPageTile {
+  width: 300px;
+  display: inline-block;
+  padding: 20px;
+  vertical-align: top;
+}
+
+.EventPageImg {
+  max-width: 300px;
+  max-height: 300px;
 }
