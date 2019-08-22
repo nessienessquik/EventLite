@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from '@material-ui/core/Link';
+import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
@@ -14,11 +14,11 @@ function createData(id, date, name, shipTo, paymentMethod, amount) {
 }
 
 const rows = [
-  createData(0, '16 Mar, 2019', 'Elvis Presley', 'Tupelo, MS', 'VISA ⠀•••• 3719', 312.44),
-  createData(1, '16 Mar, 2019', 'Paul McCartney', 'London, UK', 'VISA ⠀•••• 2574', 866.99),
-  createData(2, '16 Mar, 2019', 'Tom Scholz', 'Boston, MA', 'MC ⠀•••• 1253', 100.81),
-  createData(3, '16 Mar, 2019', 'Michael Jackson', 'Gary, IN', 'AMEX ⠀•••• 2000', 654.39),
-  createData(4, '15 Mar, 2019', 'Bruce Springsteen', 'Long Branch, NJ', 'VISA ⠀•••• 5919', 212.79),
+  createData(0, '16 Mar, 2019', 'Drake Concert', 'Atlanta, GA', '8:00 PM', "Pending"),
+  createData(1, '16 Mar, 2019', 'BBQ Festival', 'Marietta, GA', '6:00 PM', "Pending"),
+  createData(2, '17 Mar, 2019', 'Tequilla Tasting With Frank', 'Macon, GA', '9:00 PM', "Pending"),
+  createData(3, '19 Mar, 2019', 'Natural Hair Weekend', 'Atlanta, GA', '8:00 AM', "Pending"),
+  createData(4, '25 Mar, 2019', 'React Convention', 'Atlanta, GA', '9:00 AM', "Pending"),
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -27,7 +27,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Pending() {
+export default function PendingEvents() {
   const classes = useStyles();
   return (
     <React.Fragment>
@@ -36,10 +36,10 @@ export default function Pending() {
         <TableHead>
           <TableRow>
             <TableCell>Date</TableCell>
-            <TableCell>Name</TableCell>
-            <TableCell>Ship To</TableCell>
-            <TableCell>Payment Method</TableCell>
-            <TableCell align="right">Sale Amount</TableCell>
+            <TableCell>Event Name</TableCell>
+            <TableCell>City</TableCell>
+            <TableCell>Time</TableCell>
+            <TableCell align="right">Status</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
@@ -54,6 +54,11 @@ export default function Pending() {
           ))}
         </TableBody>
       </Table>
+      <div className={classes.seeMore}>
+        <Link to="/pending">
+          Manage events
+        </Link>
+      </div>
     </React.Fragment>
   );
 }

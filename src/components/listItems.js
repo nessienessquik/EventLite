@@ -13,59 +13,80 @@ import { Link } from 'react-router-dom';
 
 export const mainListItems = (
   <div>
-    <ListItem button>
+    <Link to="/pending">
+      <ListItem button>
       <ListItemIcon>
         <DashboardIcon />
       </ListItemIcon>
-      <Link to="/pending"><ListItemText primary="Manage Events" /></Link>
-    </ListItem>
+      <ListItemText primary="Manage Events" />
+    </ListItem></Link>
+
+    <Link to="/submit">
     <ListItem button>
       <ListItemIcon>
         <ShoppingCartIcon />
       </ListItemIcon>
-      <Link to="/submit"><ListItemText primary="Submit an Event" /></Link>
+      <ListItemText primary="Submit an Event" />
     </ListItem>
+    </Link>
+
+    <Link to="/profile">
     <ListItem button>
       <ListItemIcon>
         <PeopleIcon />
       </ListItemIcon>
-      <Link to="/profile"><ListItemText primary="Profile Settings" /></Link>
+      <ListItemText primary="Profile Settings" />
     </ListItem>
+    </Link>
+
+    <Link to="/about">
     <ListItem button>
       <ListItemIcon>
         <BarChartIcon />
       </ListItemIcon>
-      <ListItemText primary="Something..." />
+      <ListItemText primary="About Us" />
     </ListItem>
+    </Link>
+
+    <Link to="/about">
     <ListItem button>
       <ListItemIcon>
         <LayersIcon />
       </ListItemIcon>
       <ListItemText primary="Something else..." />
     </ListItem>
+    </Link>
   </div>
 );
 
 export const secondaryListItems = (
   <div>
     <ListSubheader inset>Admin Tools</ListSubheader>
+    <Link to="/users">
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <Link to="/users"><ListItemText primary="Manage Users" /></Link>
+     <ListItemText primary="Manage Users" />
     </ListItem>
+    </Link>
+
+    <Link to="/pending">
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
-      <Link to="/pending"><ListItemText primary="Pending Events" /></Link>
+      <ListItemText primary="Pending Events" />
     </ListItem>
+    </Link>
+
+    <Link to="/pending">
     <ListItem button>
       <ListItemIcon>
         <AssignmentIcon />
       </ListItemIcon>
       <ListItemText primary="Something Else" />
     </ListItem>
+    </Link>
   </div>
 );

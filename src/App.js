@@ -7,6 +7,7 @@ import Dashboard from './components/Dashboard';
 import Profile from './components/ProfilePage';
 import Pending from './components/PendingEventsPage';
 import Users from './components/UsersPage';
+import About from './components/About';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Route path="/submit" component={SubmitEvent} />
         <Route path="/profile" component={Profile} />
         <Route path="/users" component={Users} />
+        <Route path="/about" component={About} />
         </Router>
       </div>
   );
